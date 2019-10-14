@@ -1,0 +1,145 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(0deg,#0b74cb 0%, #0b74cb 50%, #fff 50%, #fff 100%)
+}
+.container
+{
+    max-width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+}
+.container .card
+{
+    position: relative;
+    width: 180px;
+    height: 240px;
+    background: #fff;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    transition: 0.5s;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.container:hover .card
+{
+    transform: perspective(500px) rotateY(30deg);
+}
+.container .card:hover
+{
+    transform: perspective(500px) rotateY(0deg);
+}
+.container .card:hover ~ .card
+{
+    transform: perspective(500px) rotateY(-30deg);
+}
+
+.container .card h2
+{
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 3em;
+    background: #2196f3;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    transition: box-shadow 0.5s;
+}
+.container .card:hover h2
+{
+    background: #fff;
+    color: #2196f3;
+    box-shadow: 0 0 0 150px #2196f3;
+
+}
+@media screen and (max-width: 1000px)
+{
+    .container .card {
+        width: 140px;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 800px)
+{
+    .container .card {
+        width: 100px;
+        height: 160px;
+    }
+    .container .card h2 {
+        width: 60px;
+        height: 60px;
+        line-height: 65px;
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    .container .card {
+        width: 80px;
+        height: 120px;
+    }
+    .container .card h2 {
+        width: 50px;
+        height: 50px;
+        line-height: 55px;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 500px)
+{
+    .container .card {
+        width: 60px;
+        height: 100px;
+    }
+    .container .card h2 {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 1.3em;
+    }
+}
+@media screen and (max-width: 400px)
+{
+    .container .card {
+        width: 50px;
+        height: 80px;
+    }
+    .container .card h2 {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 350px)
+{
+    .container .card {
+        width: 30px;
+        height: 60px;
+    }
+    .container .card h2 {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 1em;
+    }
+}
